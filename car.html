@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2f3640;
+            animation: sky 20s infinite linear;
+            overflow: hidden;
+        }
+
+        .sun {
+            position: fixed;
+            left: 10%;
+            bottom: 5%;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ff6348;
+            animation: sun 20s infinite linear;
+        }
+
+        .ground {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 30%;
+            background-color: #353b48;
+            animation: grass 20s infinite linear;
+        }
+
+        .road {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calc(25% - 80px);
+            height: 80px;
+            background-color: black;
+            animation: road 20s infinite linear;
+        }
+
+        div.stripes {
+            position: absolute;
+            left: 0;
+            bottom: 50%;
+            width: 8%;
+            height: 4%;
+            background-color: white;
+        }
+
+        div.stripes:nth-of-type(2) {
+            left: 20%;
+        }
+
+        div.stripes:nth-of-type(3) {
+            left: 40%;
+        }
+
+        div.stripes:nth-of-type(4) {
+            left: 60%;
+        }
+
+        div.stripes:nth-of-type(5) {
+            left: 80%;
+        }
+
+        .car {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            animation: move 20s infinite linear;
+        }
+
+        .carbody {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            border-radius: 5% 50% 5% 5%;
+            background-color: #d63031;
+            bottom: -10px;
+        }
+
+        .tires {
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            background-color: black;
+            float: left;
+            margin-right: 40px;
+            bottom: -25px;
+        }
+
+        .tires:nth-of-type(2) {
+            left: 70px;
+        }
+
+        .window {
+            position: absolute;
+            bottom: 15px;
+            left: 55px;
+            width: 30px;
+            height: 20px;
+            background-color: #74b9ff;
+            border-radius: 5% 70% 5% 5%;
+        }
+
+        .window2 {
+            position: absolute;
+            bottom: 15px;
+            left: 10px;
+            width: 40px;
+            height: 20px;
+            background-color: #74b9ff;
+        }
+
+        .light {
+            position: absolute;
+            bottom: 8px;
+            left: 93px;
+            width: 8px;
+            height: 8px;
+            border-radius: 0 40% 40% 0;
+            background-color: #f1c40f;
+        }
+
+        .cloud {
+            position: fixed;
+            top: 5%;
+            left: -10%;
+            animation: cloud 10s infinite linear;
+        }
+
+        .cloud1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ecf0f1;
+        }
+
+        .cloud2 {
+            position: absolute;
+            left: -50%;
+            top: calc(-50% + 70px);
+            width: 200px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #ecf0f1;
+        }
+
+        .cloudtwo {
+            position: fixed;
+            top: 30%;
+            left: -10%;
+            animation: cloud 15s infinite linear reverse;
+        }
+
+        @keyframes sky {
+            0% {
+                background-color: #2f3640;
+            }
+
+            10% {
+                background-color: #1B1464;
+            }
+
+            15% {
+                background-color: #30336b;
+            }
+
+            20% {
+                background-color: #ff6b81;
+            }
+
+            22% {
+                background-color: #eccc68;
+            }
+
+            40% {
+                background-color: #70a1ff;
+            }
+
+            50% {
+                background-color: #1e90ff;
+            }
+
+            60% {
+                background-color: #70a1ff;
+            }
+
+            78% {
+                background-color: #eccc68;
+            }
+
+            80% {
+                background-color: #ff6b81;
+            }
+
+            85% {
+                background-color: #30336b;
+            }
+
+            90% {
+                background-color: #57606f;
+            }
+
+            100% {
+                background-color: #2f3640;
+            }
+        }
+
+        @keyframes sun {
+            0% {
+                background-color: #d35400;
+                left: 10%;
+            }
+
+            20% {
+                background-color: #e67e22;
+
+            }
+
+            40% {
+                background-color: #f39c12;
+
+            }
+
+            50% {
+                background-color: #f1c40f;
+                bottom: 80%;
+            }
+
+            60% {
+                background-color: #f39c12;
+            }
+
+            80% {
+                background-color: #e67e22;
+            }
+
+            100% {
+                background-color: #d35400;
+                left: 90%;
+            }
+        }
+
+        @keyframes grass {
+            0% {
+                background-color: #353b48;
+            }
+
+            20% {
+                background-color: #1abc9c;
+            }
+
+            40% {
+                background-color: #2ecc71;
+            }
+
+            50% {
+                background-color: #05c46b;
+            }
+
+            60% {
+                background-color: #2ecc71;
+            }
+
+            80% {
+                background-color: #1abc9c;
+            }
+
+            100% {
+                background-color: #353b48;
+            }
+        }
+
+        @keyframes road {
+            0% {
+                background-color: #485460;
+            }
+
+            50% {
+                background-color: #1e272e;
+            }
+
+            100% {
+                background-color: #485460;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                left: -10%;
+            }
+
+            100% {
+                left: 110%;
+            }
+        }
+
+        @keyframes cloud {
+            0% {
+                left: -10%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="ground"></div>
+    <div class="road">
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+    </div>
+    <div class="car">
+        <div class="carbody"></div>
+        <div class="tires"></div>
+        <div class="tires"></div>
+        <div class="window"></div>
+        <div class="window2"></div>
+        <div class="light"></div>
+    </div>
+    <div class="cloud">
+        <div class="cloud1"></div>
+        <div class="cloud2"></div>
+    </div>
+    <div class="cloudtwo">
+        <div class="cloud1"></div>
+        <div class="cloud2"></div>
+    </div>
+
+</body>
+
+</html>
